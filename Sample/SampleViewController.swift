@@ -57,14 +57,14 @@ class SampleViewController: UITableViewController {
         presentPanModal(rowType.presentable.rowVC)
     }
 }
-
+//协议
 protocol RowPresentable {
     var string: String { get }
     var rowVC: UIViewController & PanModalPresentable { get }
 }
 
 private extension SampleViewController {
-
+    //CaseIterable:获取allCases
     enum RowType: Int, CaseIterable {
         case basic
         case fullScreen

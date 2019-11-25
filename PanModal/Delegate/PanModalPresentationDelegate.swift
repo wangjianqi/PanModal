@@ -23,6 +23,7 @@ public class PanModalPresentationDelegate: NSObject {
      Returns an instance of the delegate, retained for the duration of presentation
      */
     public static var `default`: PanModalPresentationDelegate = {
+        //默认
         return PanModalPresentationDelegate()
     }()
 

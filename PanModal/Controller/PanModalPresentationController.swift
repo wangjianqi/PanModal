@@ -27,6 +27,7 @@ public class PanModalPresentationController: UIPresentationController {
     /**
      Enum representing the possible presentation states
      */
+    //枚举值
     public enum PresentationState {
         case shortForm
         case longForm

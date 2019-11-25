@@ -18,6 +18,7 @@ import UIKit
  }
  ```
  */
+//协议
 public protocol PanModalPresentable: AnyObject {
 
     /**
@@ -42,6 +43,7 @@ public protocol PanModalPresentable: AnyObject {
 
      Default value is the longFormHeight.
      */
+    //枚举值
     var shortFormHeight: PanModalHeight { get }
 
     /**

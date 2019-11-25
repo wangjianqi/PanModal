@@ -11,6 +11,7 @@ import UIKit
  Extends PanModalPresentable with helper methods
  when the conforming object is a UIViewController
  */
+//UIViewController实现PanModalPresentable协议
 public extension PanModalPresentable where Self: UIViewController {
 
     typealias AnimationBlockType = () -> Void
@@ -35,6 +36,7 @@ public extension PanModalPresentable where Self: UIViewController {
 
      - Note: This should be called whenever any of the values for the PanModalPresentable protocol are changed.
      */
+    //布局
     func panModalSetNeedsLayoutUpdate() {
         presentedVC?.setNeedsLayoutUpdate()
     }

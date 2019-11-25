@@ -88,7 +88,7 @@ class UserGroupViewController: UITableViewController, PanModalPresentable {
     }
 
     // MARK: - Pan Modal Presentable
-
+    // tableView
     var panScrollable: UIScrollView? {
         return tableView
     }
@@ -107,6 +107,7 @@ class UserGroupViewController: UITableViewController, PanModalPresentable {
     }
 
     func shouldPrioritize(panModalGestureRecognizer: UIPanGestureRecognizer) -> Bool {
+        //CGPoint
         let location = panModalGestureRecognizer.location(in: view)
         return headerView.frame.contains(location)
     }

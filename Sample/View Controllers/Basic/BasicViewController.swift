@@ -16,6 +16,7 @@ class BasicViewController: UIViewController {
     }
 }
 
+//实现协议
 extension BasicViewController: PanModalPresentable {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {

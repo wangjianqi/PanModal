@@ -67,6 +67,7 @@ class UserGroupMemberCell: UITableViewCell {
         backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1137254902, blue: 0.1294117647, alpha: 1)
         isAccessibilityElement = true
 
+        //选中背景色
         let backgroundView = UIView()
         backgroundView.backgroundColor = #colorLiteral(red: 0.8196078431, green: 0.8235294118, blue: 0.8274509804, alpha: 1).withAlphaComponent(0.11)
         selectedBackgroundView = backgroundView
@@ -112,6 +113,7 @@ class UserGroupMemberCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        //选中背景色
         avatarView.backgroundColor = presentable.avatarBackgroundColor
     }
 

@@ -68,7 +68,7 @@ private class NavUserGroups: UserGroupViewController {
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: nil, action: nil)
     }
-
+    //重写点击方法
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 

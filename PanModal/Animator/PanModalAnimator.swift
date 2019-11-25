@@ -18,7 +18,7 @@ struct PanModalAnimator {
     struct Constants {
         static let defaultTransitionDuration: TimeInterval = 0.5
     }
-
+    //动画
     static func animate(_ animations: @escaping PanModalPresentable.AnimationBlockType,
                         config: PanModalPresentable?,
                         _ completion: PanModalPresentable.AnimationCompletionType? = nil) {

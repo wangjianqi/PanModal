@@ -22,6 +22,7 @@ public enum PanModalHeight: Equatable {
      Sets the height to be the max height with a specified top inset.
      - Note: A value of 0 is equivalent to .maxHeight
      */
+    //顶部边距
     case maxHeightWithTopInset(CGFloat)
 
     /**

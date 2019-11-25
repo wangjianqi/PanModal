@@ -16,6 +16,7 @@ class AlertView: UIView {
 
     private lazy var icon: UIView = {
         let icon = UIView()
+        //随机元素
         icon.backgroundColor = colors.randomElement()
         icon.layer.cornerRadius = 6.0
         return icon
@@ -38,6 +39,7 @@ class AlertView: UIView {
     }()
 
     private lazy var alertStackView: UIStackView = {
+        //添加view
         let stackView = UIStackView(arrangedSubviews: [titleLabel, message])
         stackView.axis = .vertical
         stackView.alignment = .leading
@@ -68,6 +70,7 @@ class AlertView: UIView {
         icon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14).isActive = true
         icon.topAnchor.constraint(equalTo: topAnchor, constant: 14).isActive = true
         icon.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14).isActive = true
+        //宽度等于高度
         icon.widthAnchor.constraint(equalTo: icon.heightAnchor).isActive = true
     }
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class TransientAlertViewController: AlertViewController {
-
+    //weak 
     private weak var timer: Timer?
     private var countdown: Int = 5
 

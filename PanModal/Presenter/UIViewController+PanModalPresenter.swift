@@ -10,6 +10,7 @@ import UIKit
 /**
  Extends the UIViewController to conform to the PanModalPresenter protocol
  */
+//实现协议
 extension UIViewController: PanModalPresenter {
 
     /**
@@ -37,19 +38,22 @@ extension UIViewController: PanModalPresenter {
 
      - Note: sourceView & sourceRect are only required for presentation on an iPad.
      */
+    //弹出
     public func presentPanModal(_ viewControllerToPresent: PanModalPresentable.LayoutType, sourceView: UIView? = nil, sourceRect: CGRect = .zero) {
 
         /**
          Here, we deliberately do not check for size classes. More info in `PanModalPresentationDelegate`
          */
-
+        //pad
         if UIDevice.current.userInterfaceIdiom == .pad {
             viewControllerToPresent.modalPresentationStyle = .popover
             viewControllerToPresent.popoverPresentationController?.sourceRect = sourceRect
             viewControllerToPresent.popoverPresentationController?.sourceView = sourceView ?? view
             viewControllerToPresent.popoverPresentationController?.delegate = PanModalPresentationDelegate.default
         } else {
+            //样式
             viewControllerToPresent.modalPresentationStyle = .custom
+            //状态栏
             viewControllerToPresent.modalPresentationCapturesStatusBarAppearance = true
             viewControllerToPresent.transitioningDelegate = PanModalPresentationDelegate.default
         }

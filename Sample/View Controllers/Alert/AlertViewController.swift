@@ -26,6 +26,7 @@ class AlertViewController: UIViewController, PanModalPresentable {
     private func setupView() {
         view.addSubview(alertView)
         alertView.translatesAutoresizingMaskIntoConstraints = false
+        //top
         alertView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
@@ -46,6 +47,7 @@ class AlertViewController: UIViewController, PanModalPresentable {
         return shortFormHeight
     }
 
+    //背景色
     var panModalBackgroundColor: UIColor {
         return UIColor.black.withAlphaComponent(0.1)
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//导航栏
 class FullScreenNavController: UINavigationController {
 
     override func viewDidLoad() {
@@ -53,6 +53,7 @@ private class FullScreenViewController: UIViewController {
         let label = UILabel()
         label.text = "Drag downwards to dismiss"
         label.font = UIFont(name: "Lato-Bold", size: 17)
+        //禁用转换布局
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,7 +67,9 @@ private class FullScreenViewController: UIViewController {
 
     private func setupConstraints() {
         view.addSubview(textLabel)
+        //x轴
         textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //y轴
         textLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
